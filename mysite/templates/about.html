@@ -1,0 +1,44 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+<p>
+For a remarkable about page, all you need to do is figure out your company's unique identity,
+and then share it with the world. Easy, right? Of course not. 
+Your "About Us" page is one of the most important pages on your website,
+ and it needs to be well crafted. This profile also happens to be one of the most commonly overlooked pages,
+ which is why you should make it stand out.
+
+The good news? It can be done. In fact,
+ there are some companies out there with remarkable "About Us" pages, the elements of which you can emulate on your own website.
+</p>
+
+<p>By the end of this post, you'll be introduced to:</p>
+
+<ul>
+	<li>The best About Us page examples (and what makes them great)</li>
+	<li>Tips on how to write your About page</li>
+	<li>The best About page templates (across multiple platforms)</li>
+</ul>
+
+<div>
+	<center>
+	<form name="myform" action="{% url 'result' %}" method="post">
+	{% csrf_token %}
+	<lable>First NO .</lable>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="t1" placeholder="First Number" required><br>
+	<lable>Second NO.</lable><input type="text" name="t2" placeholder="Second Number" required><br>
+	<button type="submit" class="btn btn-sm btn-primary">SUBMIT</button>
+	</form>
+	</center>
+</div>
+{% for i in books %}
+	<h3>{{ i }}</h3>
+	{% endfor %}
+	<!****************************************************************************************************************>
+	{% if num >= 0 %}
+		<p>{{num}} is +ve</p>
+	{% else %}
+		<p>{{num}} is -ve</p>
+	{% endif %}
+</div>
+{% endblock %}
