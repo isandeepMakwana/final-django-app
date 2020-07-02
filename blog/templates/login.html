@@ -1,0 +1,52 @@
+﻿
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid" style="background-color:aqua">
+<form class="form-horizontal" action="{% url 'login' %}"  method="POST">
+{% csrf_token %}&nbsp; 
+  <fieldset>
+  
+    <div id="legend">
+	</div>
+	<legend class="">Login</legend>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">Username</label>
+      <div class="controls">
+        <input type="text" id="username" name="username" placeholder="" class="input-xlarge" required>
+        <p class="help-block">Username can contain any letters and spcail</p>
+      </div>
+    </div>
+ <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <input type="password" id="password" name="password" placeholder="" class="input-xlarge" required>
+        <p class="help-block">Password should be at least 8 characters</p>
+      </div>
+    </div>
+        <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success">login</button>
+        <a href="{% url 'password_reset'%}"> ForgotPassword?</a>
+      </div>  
+      </div>
+	<br><br>
+
+      <P><strong>-- OR --</strong></P>
+      <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
+      <a href="{% url 'social:begin' 'facebook' %}">Login with FaceBook</a><br>
+
+	<div>
+	<label>Not a Member?</label><a href="{% url 'register' %}">Register Here</a>
+	</div>
+    
+   </fieldset>
+</form>
+
+    </div>
+ 
+
+{% endblock %}

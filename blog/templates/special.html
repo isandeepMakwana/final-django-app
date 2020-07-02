@@ -1,0 +1,14 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<center>
+<h3>Hi {{user.username}}</h3>
+<div class="container-fluid">
+      <a class="nav-link" href="{% url 'logout' %}">logout</a>
+</div>
+<div class="container-fluid">
+      <a class="nav-link" href="{% url 'payment' %}">donate</a>
+</div>
+
+</center>
+{% endblock %}
